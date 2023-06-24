@@ -1,0 +1,138 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Python Project Hub</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: url("https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?cs=srgb&dl=pexels-daniel-putzer-633409.jpg&fm=jpg&w=1920&h=1280");
+        background-size: cover;
+      }
+      .card {
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 0.5rem 1rem 0 rgba(255, 255, 255, 0.2);
+      }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.8);
+      }
+      .card .card-body .card-text {
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+      .card:hover .card-body .card-text {
+        opacity: 1;
+      }
+      footer {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Python Project Hub</a>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="jumbotron bg-transparent text-white">
+        <h1 class="display-4">Welcome to Python Project Hub!</h1>
+        <p class="lead">
+          Here we have a collection of projects that demonstrate the power of
+          Python and its various applications. Feel free to explore!
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://unsplash.com/photos/X37_L9L6LX4/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8bnV0cml0aW9uJTIwY2FsY3VsYXRvcnxlbnwwfHx8fDE2ODc2MjkwNTd8MA&amp;force=true&amp;w=640"
+              class="card-img-top"
+              alt="Nutrition Calculator"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fas fa-apple-alt"></i> Nutrition Calculator
+              </h5>
+              <p class="card-text">
+                Description of the Nutrition Calculator module.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://unsplash.com/photos/1zO4O3Z0UJA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fG1vbmV5JTIwY2FsY3VsYXRvcnxlbnwwfHx8fDE2ODc2MjkyMDh8MA&amp;force=true&amp;w=640"
+              class="card-img-top"
+              alt="EMI Calculator"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fas fa-calculator"></i> Advanced EMI Calculator
+              </h5>
+              <p class="card-text">
+                Description of the Advanced EMI Calculator module.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <img
+              src="https://unsplash.com/photos/rObq1WBp_Ew/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg3NjMxMTkzfA&amp;force=true&amp;w=640"
+              class="card-img-top"
+              alt="Weather Report"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fas fa-cloud-sun"></i> Weather Report
+              </h5>
+              <p class="card-text">Description of the Weather Report module.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        Background image by
+        <a href="https://www.pexels.com/@danbuilds/">Daniel Putzer</a> on Pexels
+      </div>
+      <div>
+        Nutrition Calculator image by
+        <a href="https://unsplash.com/@towfiqu999999">Towfiqu barbhuiya</a> on
+        Unsplash
+      </div>
+      <div>
+        EMI Calculator image by
+        <a href="https://unsplash.com/@mathieustern">Mathieu Stern</a> on
+        Unsplash
+      </div>
+      <div>
+        Weather Report image by
+        <a href="https://unsplash.com/@gavla">Gavin Allanwood</a> on Unsplash
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
