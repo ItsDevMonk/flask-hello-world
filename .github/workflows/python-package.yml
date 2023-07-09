@@ -70,6 +70,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
 
       - name: Build, tag, and push docker image to Amazon ECR
+        id: build-image
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           REPOSITORY: mywebapp
@@ -85,7 +86,13 @@ jobs:
         with:
           task-definition: .aws/td.json
           container-name: flask
-          image: $REGISTRY/$REPOSITORY:$IMAGE_TAG
+          image: ${{ steps.build-image.outputs.image }}
+
+      - name: run ls
+        run: |
+          ls -al
+          ls -al .aws
+          cat ${{ steps.render-web-container.outputs.task-definition }}
 
       - name: Deploy to Amazon ECS service
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
