@@ -79,6 +79,13 @@ jobs:
         run: |
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+          echo "image=$REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+
+      - name: run ls
+        run: |
+          ls -al
+          ls -al .aws
+          cat ${{ steps.build-image.outputs.image }}
 
       - name: Render Amazon ECS task definition
         id: render-web-container
