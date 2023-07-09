@@ -1,5 +1,5 @@
 import unittest
-from index import app  # replace with the name of your application file
+from app import app  # replace with the name of your application file
 
 class FlaskAppTests(unittest.TestCase):
     
