@@ -99,3 +99,7 @@ jobs:
           task-definition: ${{ steps.render-web-container.outputs.task-definition }}
           service: webapp-service
           cluster: mywebapp
+
+      - name: Start the new task definition
+        run: |
+          aws ecs update-service --cluster mywebapp --service webapp-service --desired-count 1
