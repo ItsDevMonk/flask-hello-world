@@ -89,11 +89,9 @@ jobs:
           container-name: flask
           image: ${{ steps.build-image.outputs.image }}
 
-      - name: run ls
+      - name: Stop the previous task definition
         run: |
-          ls -al
-          ls -al .aws
-          cat ${{ steps.render-web-container.outputs.task-definition }}
+          aws ecs update-service --cluster mywebapp --service webapp-service --desired-count 0
 
       - name: Deploy to Amazon ECS service
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
